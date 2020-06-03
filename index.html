@@ -9,7 +9,7 @@
   body{
 	font-size:12px;
   }
-  .draggable { width: 100px; height: 50px; padding: 0.5em; float: left; margin: 15px 20px 5px 0;}
+  .draggable { width: 100px; height: 50px; padding: 0.5em; float: left; margin: 15px 20px 5px 0;cursor:pointer;}
   .droppable { width: 120px; height: 60px; padding: 0.5em; float: left; margin: 5px;color:#888;}
   .draggable.book{background:#aac; }
   .droppable.book{background:#ddf; }
@@ -26,10 +26,19 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
-    $( ".draggable" ).draggable();
+    $( ".draggable" ).draggable({
+	  start:function(event, ui){
+		if($(this).data("child")){
+			$(this).data("child").css("opacity", 1).text("Drop here");
+		}
+	  }}
+	  );
+
     $( ".droppable" ).droppable({
       drop: function( event, ui ) {
-       
+		$(this).text($(ui.draggable).text());
+		$(this).css("opacity", 0.1);
+		$(ui.draggable).data("child", $(this));
       }
     });
   } );
