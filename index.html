@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+  <style>
+  body{
+	font-size:12px;
+  }
+  .draggable { width: 100px; height: 50px; padding: 0.5em; float: left; margin: 15px 20px 5px 0;}
+  .droppable { width: 120px; height: 60px; padding: 0.5em; float: left; margin: 5px;color:#888;}
+  .draggable.book{background:#aac; }
+  .droppable.book{background:#ddf; }
+  
+  .draggable.music{background:#aca; }
+  .droppable.music{background:#dfd; }
+  
+  .draggable.lux{background:#caa; }
+  .droppable.lux{background:#fdd; }
+  
+  br{clear:both;}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".draggable" ).draggable();
+    $( ".droppable" ).droppable({
+      drop: function( event, ui ) {
+       
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+
+
+
+<br/>
+
+<table>
+	<thead>
+		<tr><th></th><th>Dan</th>
+		<th>Gavin</th>
+		<th>Andy</th>
+		<th>Josu</th>
+		<th>Paul</th>
+		<th>George</th>
+		<th>Pauline</th>
+		<th>John</th></tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr><td>Music</td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable music" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		</tr>
+		
+		<tr><td>Book</td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable book" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		</tr>
+		
+		<tr><td>Luxury</td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		<td><div class="droppable lux" class="ui-widget-header">
+		  <p>Drop here</p>
+		</div></td>
+		</tr>
+	</tbody>
+</table>
+ 
+  
+<br/>
+
+<hr/>
+
+<br/>
+
+ 
+  <div class="draggable music" class="ui-widget-content">
+  <p>Holst - the Planets</p>
+</div>
+
+  <div class="draggable music" class="ui-widget-content">
+  <p>REM Losing my Religion</p>
+</div>
+
+  <div class="draggable music" class="ui-widget-content">
+  <p>Pearl Jam - Vortical</p>
+</div>
+
+  <div class="draggable music" class="ui-widget-content">
+  <p>Lifted - the lighthouse family</p>
+</div>
+
+  <div class="draggable music" class="ui-widget-content">
+  <p>Bach - Goldberg variations</p>
+</div>
+
+  <div class="draggable music" class="ui-widget-content">
+  <p>Mozart - Requiem</p>
+</div>
+
+  <div class="draggable music" class="ui-widget-content">
+  <p>Isaac Delusion - Land of gold</p>
+</div>
+
+  <div class="draggable music" class="ui-widget-content">
+  <p>Holst - the Planets</p>
+</div>
+ 
+
+
+<br/>
+
+<br/>
+<br/>
+
+
+
+<div class="draggable book" class="ui-widget-content">
+  <p>Proust - in search of lost time</p>
+</div>
+ 
+ <div class="draggable book" class="ui-widget-content">
+  <p>The hitchhikers giude to the galaxy</p>
+</div>
+ 
+ 
+  <div class="draggable book" class="ui-widget-content">
+  <p>Stig of the dump</p>
+</div>
+ 
+ 
+   <div class="draggable book" class="ui-widget-content">
+  <p>How to survive a desert island</p>
+</div>
+ 
+ 
+  
+   <div class="draggable book" class="ui-widget-content">
+  <p>The Penguin history of the world</p>
+</div>
+ 
+   
+   <div class="draggable book" class="ui-widget-content">
+  <p>The history of the most notorious pyrates</p>
+</div>
+ 
+ 
+    <div class="draggable book" class="ui-widget-content">
+  <p>The Gormenghast trilogy</p>
+</div>
+
+ <div class="draggable book" class="ui-widget-content">
+  <p>The hitchhikers giude to the galaxy</p>
+</div>
+ 
+ 
+ <br/>
+ 
+  
+ <br/>
+ 
+
+  
+
+ 
+   <div class="draggable lux" class="ui-widget-content">
+  <p>Hair clippers</p>
+</div>
+
+  <div class="draggable lux" class="ui-widget-content">
+  <p>A bed</p>
+</div>
+
+  <div class="draggable lux" class="ui-widget-content">
+  <p>A telescope</p>
+</div>
+
+  <div class="draggable lux" class="ui-widget-content">
+  <p>A puppy</p>
+</div>
+
+  <div class="draggable lux" class="ui-widget-content">
+  <p>A hammock and pillow</p>
+</div>
+
+  <div class="draggable lux" class="ui-widget-content">
+  <p>A piano</p>
+</div>
+
+  <div class="draggable lux" class="ui-widget-content">
+  <p>A pillow</p>
+</div>
+
+  <div class="draggable lux" class="ui-widget-content">
+  <p>Running shoes</p>
+</div>
+ 
+ 
+</body>
+</html>
