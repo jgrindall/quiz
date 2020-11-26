@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
   body{
 	font-size:14px;
@@ -28,15 +28,11 @@
 	margin-bottom:50px;
   }
   .img > img{
-	 height:300px;
+	 height:275px;
 	
   }
   
-  
-  .imglarge > img{
-	 height:400px;
-	
-  }
+
 
   h1{
     color:white;
@@ -49,47 +45,41 @@
   
 
   br{clear:both;}
+
   </style>
  
 </head>
 <body>
 
+
+<script>
+
+
+$(document).ready(function(){
+	
+	var letters = ["h","a","p","p2","y","b","i","r","t","h2","d","a2","y2","l","o","u","i3","s2","e"];
+	var order = [0, 1, 5, 2, 7, 10, 8, 12, 14, 4, 3, 15, 11, 6, 9, 13, 16, 17, 18];
+	
+	for (var i = 0; i < order.length; i++){
+		var img = $("<div class='img' ><img src='./stamps/" + letters[order[i]] + ".jpg'/><br/></div>");
+		if(i === 14){
+			img.append("<span> (the woman)</span>");
+		}
+		if(i === 16){
+			img.append("<span> (the artist)</span>");
+		}
+		$("body").append(img);
+	}
+});
+
+</script>
+
 <br/>
 
 <h1>Question 1 </h1>
 
-<p>Name these lego characters  (1 point each)</p>
+<p>Find the subjects of each of these postage stamps. Take the last letter of the surname of each person.  Rearrange the 19 letters to make a three-word phrase. (Half a point per person, and two for the phrase)</p>
 
-<br/>
-
-
-<div class='img' >
-	<img src="./arrival.jpg"/>
-</div>
-
-<div class='img' >
-	<img src="./aa.jpg"/>
-</div>
-
-<div class='img' >
-	<img src="./life.jpg"/>
-</div>
-
-<div class='img' >
-	<img src="./hh.jpg"/>
-</div>
-
-<div class='img' >
-	<img src="./paul.jpg"/>
-</div>
-
-<div class='img' >
-	<img src="./mib.jpg"/>
-</div>
-<br/>
-
-
-<br/>
 <br/>
 
 
