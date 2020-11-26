@@ -61,13 +61,8 @@ $(document).ready(function(){
 	var order = [0, 1, 5, 2, 7, 10, 8, 12, 14, 4, 3, 15, 11, 6, 9, 13, 16, 17, 18];
 	
 	for (var i = 0; i < order.length; i++){
-		var img = $("<div class='img' ><img src='./stamps/" + letters[order[i]] + ".jpg'/><br/></div>");
-		if(i === 14){
-			img.append("<span> (the woman)</span>");
-		}
-		if(i === 16){
-			img.append("<span> (the artist)</span>");
-		}
+		var img = $("<div class='img' ><img src='./stamps/" + letters[i] + ".jpg'/><br/></div>");
+		
 		$("body").append(img);
 	}
 });
